@@ -1,4 +1,4 @@
-# Cliente de Aplicación de Gestión de Películas
+# Cliente de aplicación de gestión de películas
 
 Este proyecto es la interfaz de usuario de una aplicación de gestión de películas que permite realizar operaciones de creación, lectura, actualización y eliminación (CRUD) sobre un conjunto de películas. La aplicación está desarrollada en React y utiliza Axios para comunicarse con un servidor backend.
 
