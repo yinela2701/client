@@ -16,9 +16,9 @@ function App() {
 
   const [peliculasList, setPeliculas] = useState([]);
 
-  useEffect(() => {
-    getPeliculas();
-  }, []);
+  //useEffect(() => {
+  //  getPeliculas();
+  //}, []);
 
   const add = () => {
     Axios.post('http://localhost:3001/create', {
