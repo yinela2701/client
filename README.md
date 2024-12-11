@@ -1,70 +1,128 @@
-# Getting Started with Create React App
+# Cliente de Aplicación de Gestión de Películas
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto es la interfaz de usuario de una aplicación de gestión de películas que permite realizar operaciones de creación, lectura, actualización y eliminación (CRUD) sobre un conjunto de películas. La aplicación está desarrollada en React y utiliza Axios para comunicarse con un servidor backend.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Características
 
-### `npm start`
+- **Agregar películas**: Permite ingresar el nombre, director, descripción y año de una película.
+- **Listar películas**: Muestra todas las películas almacenadas en la base de datos.
+- **Editar películas**: Actualiza los detalles de una película existente.
+- **Eliminar películas**: Elimina una película seleccionada de la base de datos.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Requisitos previos
 
-### `npm test`
+Asegúrate de tener instalados los siguientes componentes antes de comenzar:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [Node.js](https://nodejs.org/) (v14 o superior recomendado)
+- [npm](https://www.npmjs.com/) o [yarn](https://yarnpkg.com/)
+- Un servidor backend en funcionamiento (consulta el repositorio del servidor si lo tienes disponible).
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Instalación
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clona este repositorio:
+   ```bash
+   git clone <URL_DEL_REPOSITORIO>
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Navega al directorio del proyecto:
+   ```bash
+   cd client
+   ```
 
-### `npm run eject`
+3. Instala las dependencias necesarias:
+   ```bash
+   npm install
+   ```
+   o, si usas Yarn:
+   ```bash
+   yarn install
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Dependencias utilizadas
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+El proyecto utiliza las siguientes dependencias principales:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **React**: Biblioteca para construir la interfaz de usuario.
+- **Axios**: Librería para realizar solicitudes HTTP.
+- **Bootstrap**: Framework CSS para el diseño de la interfaz.
 
-## Learn More
+Estas dependencias se pueden instalar automáticamente al ejecutar `npm install` o `yarn install`.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Configuración
 
-### Code Splitting
+1. Asegúrate de que tu servidor backend esté funcionando y que esté configurado para escuchar en el puerto `3001` (o ajusta las URLs en el código fuente de este cliente).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2. Verifica las rutas utilizadas en el backend:
+   - `POST http://localhost:3001/create`: Crear una nueva película.
+   - `PUT http://localhost:3001/update`: Actualizar una película existente.
+   - `DELETE http://localhost:3001/delete/:id`: Eliminar una película por su ID.
+   - `GET http://localhost:3001/peliculas`: Listar todas las películas.
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Ejecución
 
-### Making a Progressive Web App
+1. Inicia la aplicación cliente:
+   ```bash
+   npm start
+   ```
+   o, si usas Yarn:
+   ```bash
+   yarn start
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+2. Abre tu navegador en `http://localhost:3000` para ver la aplicación en funcionamiento.
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Uso
 
-### Deployment
+1. Completa el formulario con los detalles de la película y haz clic en **Guardar** para agregarla.
+2. Usa los botones **Editar** y **Eliminar** en la tabla para actualizar o borrar películas.
+3. La lista de películas se actualiza automáticamente después de cada operación.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## Estructura del proyecto
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```plaintext
+client/
+├── public/              # Archivos públicos
+├── src/                 # Código fuente
+│   ├── App.css          # Estilos principales
+│   ├── App.js           # Componente principal
+│   ├── index.js         # Punto de entrada de React
+│   └── ...
+├── package.json         # Dependencias y scripts
+└── ...
+```
+
+---
+
+## Tecnologías utilizadas
+
+- **React**: Para la construcción de la interfaz de usuario.
+- **Axios**: Para la comunicación con el backend.
+- **Bootstrap**: Para el diseño y estilos.
+
+---
+
+## Contribuciones
+
+Si deseas contribuir, abre un Issue o realiza un Pull Request en este repositorio.
+
+---
+
+## Licencia
+
+Este proyecto está licenciado bajo los términos de la [MIT License](LICENSE).
